@@ -34,9 +34,17 @@
                         <label for="Tanggal_Lahir">Tanggal Lahir</label>
                         <input type="Tanggal_Lahir" name="Tanggal_Lahir" class="form-control" id="Tanggal_Lahir" aria-describedby="Tanggal_Lahir">
                     </div>
-                    <div class="form-group">
+                    <!-- <div class="form-group">
                         <label for="Kelas">Kelas</label>
                         <input type="Kelas" name="Kelas" class="form-control" id="Kelas" aria-describedby="password">
+                    </div> -->
+                    <div class="form-group">
+                        <label for="Kelas">Kelas</label>
+                        <select name ="Kelas" class="form-control">
+                            @foreach ($kelas as $Kelas)
+                            <option value="{{$Kelas->id}}">{{$Kelas->nama_kelas}}</option>
+                            @endforeach
+                        </select>
                     </div>
                     <div class="form-group">
                         <label for="Jurusan">Jurusan</label>
