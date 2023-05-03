@@ -19,4 +19,5 @@ Route::get('/', function () {
      return view('welcome');
 });
 
+Route::get('mahasiswas/nilai/{Nim}', [MahasiswaController::class, 'nilai']);
 Route::resource('mahasiswas', MahasiswaController::class);
